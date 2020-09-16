@@ -24,15 +24,20 @@ class App {
         int attempt = 1;
         do{
         
-            int gamerNumber = scanner.nextInt();
-            if (myNumber == gamerNumber) {
-                System.out.println("ты выиграл!");
+           int gamerNumber = scanner.nextInt();
+            if(myNumber == gamerNumber){
+                System.out.println("Ты выиграл!");
                 break;
             }else{
-                if(attempt < 3) {
-                    System.out.println("не угадал! попробуй еше:");
+                if(attempt < 3){
+                    System.out.println("Не угадал, попробуй еще: ");
+                    if(myNumber > gamerNumber){
+                        System.out.println("(Задуманное число больше)");
+                    }else{
+                        System.out.println("(Задуманное число меньше)");
+                    }
                 }else{
-                    System.out.println("ты проиграл. Задумано число: "+myNumber);    
+                    System.out.println("Ты проиграл. Задумано число: "+myNumber);
                     break;
                 }
             }
