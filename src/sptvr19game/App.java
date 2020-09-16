@@ -15,7 +15,8 @@ class App {
     public void run() {
         System.out.println("угадай задуманное число.");
         System.out.println("------------------");
-        int myNumber = 2;
+        Random random = new Random();
+        int myNumber = random.nextInt(5-0+1)+0;
         System.out.println("задуманно число от 0 до 5. угадай.");
         Scanner scanner = new Scanner (System.in);
         int gamerNumber = scanner.nextInt();
